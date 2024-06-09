@@ -1,0 +1,12 @@
+# Dependency directories
+node_modules/
+
+# dotenv environment variable files
+.env
+
+# Stores VSCode settings
+.vscode/
+
+# Additional Json files
+config.json
+nodemon.json
