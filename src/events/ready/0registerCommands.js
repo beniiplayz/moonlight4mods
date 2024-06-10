@@ -21,7 +21,7 @@ module.exports = async (client) => {
       if (existingCommand) {
         if (localCommand.deleted) {
           await applicationCommands.delete(existingCommand.id);
-          console.log(`🗑 Törölt parancs: "${name}".`);
+          console.log(`🗑️ Törölt parancs: "${name}".`);
           continue;
         }
 
@@ -31,12 +31,12 @@ module.exports = async (client) => {
             options,
           });
 
-          console.log(`🔁 Frissített parancs: "${name}".`);
+          console.log(`🔍 Frissített parancs: "${name}".`);
         }
       } else {
         if (localCommand.deleted) {
           console.log(
-            `⏩ Átugrott parancsregisztrálás: "${name}", mivel ki lett kapcsolva.`
+            `🏃🏻‍♂️ Átugrott parancsregisztrálás: "${name}", mivel ki lett kapcsolva.`
           );
           continue;
         }
@@ -51,6 +51,6 @@ module.exports = async (client) => {
       }
     }
   } catch (error) {
-    console.log(`Hiba történt: ${error}`);
+    console.log(`🧐 Hibába ütközött a parancsok regisztrálása: ${error}`);
   }
 };
